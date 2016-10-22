@@ -5,6 +5,7 @@
 module.exports = function(app, Boards){
 
     app.get('/board/:slug', function(req, res){
+
         Boards.findOne({
             where: {
                 slug: req.params.slug
@@ -21,4 +22,4 @@ module.exports = function(app, Boards){
         })
     });
 
-}
+};
