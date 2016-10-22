@@ -1,0 +1,7 @@
+body{
+    background: #ffe url(/assets/img/bg/fade.png) top repeat-x;
+    color: #800;
+}
+a:visited {
+    color: blue;
+}
