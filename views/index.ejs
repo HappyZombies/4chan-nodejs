@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>4chan</title>
-        <link rel="stylesheet" type="text/css" href="/assets/css/homepage.css"/>
-        <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
-    </head>
-    <body>
+<% include partials/header %>
+    <body id="homePageBody">
+        <header>
+            <div id="logo">
+                <a href="/" title="Home">
+                    <img src="/assets/img/4chan-logo.png" id="logoImg"/>
+                </a>
+            </div>
+        </header>
         Welcome to 4chan!
+        <h1>Boards</h1>
+        <% for(var i = 0; i < boards.length; i++){ %>
+            <p><a href="/board/<%=boards[i].slug%>"><%= boards[i].name %> </a></p>
+        <% } %>
     </body>
-</html>
+<% include partials/footer %>
