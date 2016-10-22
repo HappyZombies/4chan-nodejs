@@ -17,3 +17,40 @@
     width: 300px;
     height: 120px;
 }
+#home-announcement-text{
+    min-height: 91px;
+}
+#all-boards a {
+    color: #800;
+    text-decoration: none;
+}
+#all-boards a:hover {
+    color: #e00;
+    text-decoration: underline;
+}
+
+#disclaimer-dialog{
+    top: 50px;
+    border: 1px solid;
+    text-align: left;
+    position: absolute;
+    margin: auto auto auto -151px;
+    width: 300px;
+    box-shadow: 2px 2px 0 1px rgba(0,0,0,0.10);
+    background: #fff;
+    left: 50%;
+}
+
+#disclaimer-dialog .body {
+    padding: 8px;
+}
+
+#disclaimer-dialog li {
+    display: list-item;
+    list-style: decimal inside;
+}
+
+.disclaimer-footer {
+    margin-top: 20px;
+    text-align: center;
+}
