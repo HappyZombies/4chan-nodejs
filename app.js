@@ -8,10 +8,10 @@ var express = require('express'),
     bodyParser = require('body-parser');
 require('dotenv').config();
 var Boards = require("./models/boards");
-var middlewares = require("./middlewares");
+//var middlewares = require("./middlewares");
 //'Custom' modules/variables.
 var port = process.env.PORT || 3000;
-var indexController = require("./controllers")
+var indexController = require("./controllers");
 var boardController = require("./controllers/boards");
 
 // Begin Middleware
