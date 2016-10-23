@@ -20,12 +20,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-//app.use(middlewares.setLocals); not yet
 app.set('view engine', 'ejs');
 
+//set global variable for all the boards for every page.
+Boards.findAll().then(function(boards){
+    app.locals.boards = boards;
+}).catch(function(err){
+    console.log("DB Error "+err);
+    app.locals.boards = [{}];
+});
 
 //Call in our controllers/routes
-indexController(app, Boards);
+indexController(app);
 boardController(app, Boards);
 //Listen on port specified.
 app.listen(port, function(){
