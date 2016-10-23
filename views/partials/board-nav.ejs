@@ -1,0 +1,13 @@
+<nav id="board-navigation">
+    <span class="boards-list">
+    [
+        <% for(var i = 0; i < boards.length; i++){ %>
+        <a href="/board/<%=boards[i].slug%>" onclick="showDisclaimer(event)"><%= boards[i].slug %></a> /
+        <% } %>
+        ]
+    </span>
+    <span class="right-nav">
+        [<a href="#">Settings</a>]
+        [<a href="/">Home</a>]
+    </span>
+</nav>
