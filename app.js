@@ -8,6 +8,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 require('dotenv').config();
 var Boards = require("./models/boards");
+var Threads = require("./models/threads");
 //var middlewares = require("./middlewares");
 //'Custom' modules/variables.
 var port = process.env.PORT || 3000;
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 //set global variable for all the boards for every page.
+//when running node app.js for the first time, this local variable will not get set. Run node app.js twice!
 Boards.findAll().then(function(boards){
     app.locals.boards = boards;
 }).catch(function(err){
@@ -32,7 +34,7 @@ Boards.findAll().then(function(boards){
 
 //Call in our controllers/routes
 indexController(app);
-boardController(app, Boards);
+boardController(app, Boards, Threads);
 //Listen on port specified.
 app.listen(port, function(){
     console.log("Website is running on http://" + process.env.HOST + ":" + port);
