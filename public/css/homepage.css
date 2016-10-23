@@ -20,6 +20,10 @@
 #home-announcement-text{
     min-height: 91px;
 }
+#stats .box-content {
+    margin-top: 5px;
+    text-align: center;
+}
 #all-boards a {
     color: #800;
     text-decoration: none;
@@ -53,4 +57,43 @@
 .disclaimer-footer {
     margin-top: 20px;
     text-align: center;
+}
+
+#home-footer{
+    font-size: 93%;
+    text-align: center;
+    clear: both;
+    border-top: 1px solid;
+}
+
+#home-footer ul{
+    display: table;
+    margin: auto;
+    width: 750px;
+}
+#home-footer li#first-home {
+    border-left: 1px solid;
+}
+#home-footer-container{
+    width: 76%;
+    margin: 0 auto;
+}
+#home-footer li a{
+    color: #800;
+    text-decoration: none;
+}
+#home-footer li a:hover{
+    color: #c63;
+}
+#home-footer li {
+    background: #fed;
+    display: block;
+    float: left;
+    border: 1px solid;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 2px;
+    border-left: none;
+    margin-top: -1px;
+    padding-top: 2px;
 }
