@@ -1,5 +1,36 @@
 <% include partials/header %>
+
+<body class="boards-body">
+    <nav id="board-navigation">
+        <span class="boards-list">
+        [
+        <% for(var i = 0; i < boards.length; i++){ %>
+            <a href="/board/<%=boards[i].slug%>" onclick="showDisclaimer(event)"><%= boards[i].slug %></a> /
+        <% } %>
+        ]
+        </span>
+        <span class="right-nav">
+            [<a href="#">Settings</a>]
+            [<a href="/">Home</a>]
+        </span>
+    </nav>
+    <div class="board-banner">
+        <div id="banner-container">
+            <img src="" id="banner-img">
+        </div>
+        <div id="board-title">/<%=board.slug%>/ - <%=board.name%></div>
+    </div>
+    <hr class="ninety">
+
+    <div>Ad goes here</div>
+
+    <hr class="below-title">
     
-    <h1>Welcome to <%=board.name%></h1>
+    <div class="post-form">
+
+    </div>
+
+    <script src="/assets/js/boards-main.js"></script>
+</body>
 
 <% include partials/footer %>

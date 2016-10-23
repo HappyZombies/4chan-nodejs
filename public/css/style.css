@@ -9,7 +9,9 @@ body{
 a:visited {
     color: blue;
 }
-
+a:hover{
+    color: red;
+}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
     margin: 0;
     padding: 0;
@@ -34,7 +36,18 @@ h3 {
     font-size: 100%;
     font-weight: bold;
 }
-
+hr {
+    border: none;
+    border-top: 1px solid #D9BFB7;
+    height: 0;
+}
+hr.ninety{
+    width: 90%;
+}
+hr.below-title{
+    width: 728px;
+    max-width: 100%;
+}
 #back-drop{
     display: block;
     content: '';

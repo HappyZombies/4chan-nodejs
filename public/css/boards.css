@@ -1,0 +1,43 @@
+.boards-body{
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10pt!important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#board-navigation{
+    font-size: 9pt;
+    color: #B86;
+}
+#board-navigation a{
+    font-weight: normal;
+    padding: 1px;
+    text-decoration: none;
+    color: #800000;
+}
+.boards-list{
+    float:left;
+}
+.right-nav{
+    float:right;
+}
+.board-banner{
+    text-align: center;
+    clear: both;
+}
+#banner-container{
+    border: 1px solid #800;
+    margin: 5px auto;
+    width: 300px;
+    height: 100px;
+    max-width: 100%;
+}
+#board-title{
+    font-family: Tahoma,sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-top: 0;
+}
