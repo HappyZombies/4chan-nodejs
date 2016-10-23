@@ -41,3 +41,12 @@
     letter-spacing: -2px;
     margin-top: 0;
 }
+#post-form-toggle{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#post-form-toggle a {
+    text-decoration: none;
+}
