@@ -16,7 +16,10 @@ With MySQL, create a database. If you are lazy, copy this command in insert into
 There are a lot of features that 4chan provides that are not yet added. The overall core functionality of 4chan is what's currently present. These 4chan features will be added eventually. 
 
 # FAQ 
+
  1. **Why aren't you using any front-end libraries ?** 
     * This 4chan clone is using vanilla front end becuase this project was made for the purpose of *not* using front-end libraries. Instead, to learn and make sure I know vanilla CSS and JS, I create the tools that I need without the assitance of libraries. Maybe I will create another clone using Vue.js, Polymer.js, and Dojo Toolkit, who knows! 
 2. **I want to help!** 
     * Sure! This project is made for fun! I have no intent on publishing this (who knows honestly). Go ahead open an issue if there's a bug, fork, and send requests! The more the merrier.
+
+ # [Join our Slack!]](https://4chan-nodejs.slack.com)
