@@ -28,9 +28,29 @@
             <button type="submit">Post</button>
         </form>
     </div>
-    Example: Retrieving thread via DB below:<br>
-    <%-JSON.stringify(threads)%>
+    <div class="board-announcment">
+        <hr class="short-length">
+        <p>1/5/2017 - Remember to read the rules you dummies.</p>
+        <hr class="short-length">
+    </div>
 
+    <!--display each thread from this board, make a seperate file for this ? -->
+    <%-JSON.stringify(threads)%>
+    <% threads.forEach(function(thread){%>
+        <hr>
+        <div class="thread" id="<%=thread.id%>">
+            <div class="threadContainer">
+                <div class="file">
+                    <div class="fileText">File: <a><%=thread.file%></a></div>
+                    <a class="fileThumb" href="<%=thread.file%>" target="_blank">
+                        <img src="<%=thread.file%>" >
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <% }); %>
+    
     <script src="/assets/js/boards-main.js"></script>
 </body>
 

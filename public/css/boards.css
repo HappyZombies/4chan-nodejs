@@ -7,6 +7,14 @@
     padding-left: 5px;
     padding-right: 5px;
 }
+
+.board-announcment{
+    font-size: 11px;
+    width: 468px;
+    margin: auto;
+    text-align: left;
+}
+
 #board-navigation{
     font-size: 9pt;
     color: #B86;
@@ -49,4 +57,32 @@
 
 #post-form-toggle a {
     text-decoration: none;
+}
+
+.thread{
+    margin: 0px;
+    clear: both;
+}
+
+.threadContainer{
+    display: inline;
+}
+.fileText{
+    text-align: left;
+}
+.fileText a {
+    color: #00E;
+    text-decoration: underline;
+}
+.fileThumb{
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.fileThumb img{
+    border: none;
+    float: left;
 }

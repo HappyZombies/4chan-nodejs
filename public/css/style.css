@@ -48,6 +48,10 @@ hr.below-title{
     width: 728px;
     max-width: 100%;
 }
+hr.short-length{
+    width: 468px;
+    max-width: 100%;
+}
 #back-drop{
     display: block;
     content: '';
