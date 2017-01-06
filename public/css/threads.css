@@ -1,0 +1,70 @@
+.thread{
+    text-align: left;
+}
+
+.thread-container{
+    clear: both;
+    margin: 0;
+    height: auto;
+}
+
+.hideIcon{
+    float:left;
+}
+
+ .hideIcon:hover{
+    color: #800;
+    cursor: pointer;
+}
+
+.threadThumbnail {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.threadImg {
+    height: auto;
+    max-width: 200px;
+}
+
+#thread-author{
+    color: #117743;
+}
+
+#thread-title, #thread-id, #thread-comment, #thread-author{
+    font-weight: bold;
+}
+
+#thread-title{
+    color: #cc1105;
+}
+
+#thread-message{
+    font-size: inherit;
+}
+
+.summary{
+    color:#707070;
+}
+
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: " ";
+}
+
+.clearfix:after{
+     clear: both;
+}
+
+.hideThread img{
+    content: url("/assets/img/tools/post_expand_plus.png");
+}
+
+.hideThread + div{
+    display: none;
+}
+

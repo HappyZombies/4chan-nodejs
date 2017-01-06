@@ -33,21 +33,27 @@
         <p>1/5/2017 - Remember to read the rules you dummies.</p>
         <hr class="short-length">
     </div>
-
+    
     <!--display each thread from this board, make a seperate file for this ? -->
     <%-JSON.stringify(threads)%>
     <% threads.forEach(function(thread){%>
         <hr>
-        <div class="thread" id="<%=thread.id%>">
-            <div class="threadContainer">
-                <div class="file">
-                    <div class="fileText">File: <a><%=thread.file%></a></div>
-                    <a class="fileThumb" href="<%=thread.file%>" target="_blank">
-                        <img src="<%=thread.file%>" >
-                    </a>
+        <section class="thread-container id-<%= thread.id %> clearfix">
+                <span class="hideIcon"><img src="/assets/img/tools/expand.png"></span>
+                <div class="thread">
+                    <div class="threadThumbnail">
+                        <a class="threadImg-big" href="<%= thread.file %>">
+                            <img class="threadImg" src="<%= thread.file %>" title="Click to enlarge image.">
+                        </a>
+                    </div>
+                    <span id="thread-title"><%= thread.subject %></span>
+                    <span id="thread-author"><%= thread.author %></span>
+                    <span id="thread-date"><%= thread.createdAt %></span>
+                    <span id="thread-id">No.<%= thread.id %></span>
+                    <blockquote id="thread-message" class="comment"><%= thread.comment %></blockquote>
+                    <span class="summary"><a href="/boards/<%= board.slug %>/thread/<%= thread.id %>">Click here</a> to view thread.</span>
                 </div>
-            </div>
-        </div>
+        </section>
 
     <% }); %>
     

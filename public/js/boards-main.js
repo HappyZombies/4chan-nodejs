@@ -2,7 +2,11 @@
  * Created by Daniel Reguero on 10/23/2016.
  */
 var toggle_form_button = document.getElementById("post-form-toggle");
-var post_thread_form = document.getElementById("post-thread-form")
+var post_thread_form = document.getElementById("post-thread-form");
+var hideIcon = document.getElementsByClassName("hideIcon");
+var getUrl = window.location;
+var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+
 function randomBanner(){
     //lol lazy
     var images = new Array("1.gif", "2.gif", "3.gif", "4.gif", "5.gif", "6.gif");
@@ -18,3 +22,11 @@ toggle_form_button.addEventListener('click', function(e){
     post_thread_form.style.display = "block";
     toggle_form_button.style.display = "none"; //why does 4chan hide their toggle ?
 }, false);
+
+
+for (var i = 0; i < hideIcon.length; i++) {
+   hideIcon[i].addEventListener('click', function(e){
+       e.preventDefault();
+       this.classList.toggle("hideThread");
+   }, false);
+}
