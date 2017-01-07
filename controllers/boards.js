@@ -15,11 +15,9 @@ module.exports = function(app, Boards, Threads, Comments){
             if(board == null){
                 res.status(400).send({ error: 'Board Not Found!' });
             }else{
-                //maybe we could use a has many / belongs to relationship ?
                 Threads.findAll({
-                    where: {
-                        board_id: board.id
-                    },
+                    where: { board_id: board.id },
+                    limit: 5,
                     include: [ {model: Comments, as: "comments", limit: 5, order: "createdAt ASC"} ]
                 }).then(function(threads){
                     res.render('boards', {board: board, threads: threads});
