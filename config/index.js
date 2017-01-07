@@ -28,12 +28,12 @@ module.exports = {
         Comments.belongsTo(Threads, { foreignKey: 'thread_id', constraints: true, as: 'threads' });
         Threads.hasMany(Comments, { foreignKey: 'thread_id', constraints: true, as: 'comments' });
 
-        sequelize.sync({ force: true }).then(function(){
-           return Boards.findOrCreate({where: {slug: "pol"}, defaults: {name: "Politically Incorrect", slug: "pol"}}).then(function(board, board_created){
+        sequelize.sync().then(function(){
+           return Boards.findOrCreate({where: {id: 1}, defaults: {name: "Politically Incorrect", slug: "pol"}}).then(function(board, board_created){
                 
                     //Board created, now make the threads
                     return Threads.findOrCreate({where: {id: 1}, defaults:{
-                            boardId: 1,
+                            boardId: board[0].id,
                             subject: "First /Pol/ thread",
                             author: "HappyZombies",
                             comment: "This is the comment, pretty nice",
@@ -42,7 +42,7 @@ module.exports = {
                         
                             //Board created, now make the Comments
                             return Comments.findOrCreate({where: {id: 1}, defaults:{
-                                    threadId: 1,
+                                    threadId: thread[0].id,
                                     author: "420",
                                     comment: "This is reply to the thread"
                             }}).then(function(){
