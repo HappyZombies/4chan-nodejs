@@ -29,23 +29,23 @@ module.exports = {
         Threads.hasMany(Comments, { foreignKey: 'thread_id', constraints: true, as: 'comments' });
 
         sequelize.sync({ force: true }).then(function(){
-           return Boards.create({name: "Politically Incorrect", slug: "pol"}).then(function(board, board_created){
-                if(board_created){
+           return Boards.findOrCreate({where: {slug: "pol"}, defaults: {name: "Politically Incorrect", slug: "pol"}}).then(function(board, board_created){
+                
                     //Board created, now make the threads
-                    return Threads.create({
-                            board_id: board.id,
+                    return Threads.findOrCreate({where: {id: 1}, defaults:{
+                            boardId: 1,
                             subject: "First /Pol/ thread",
                             author: "HappyZombies",
                             comment: "This is the comment, pretty nice",
                             file: "https://s.4cdn.org/image/fp/logo-transparent.png" //change this...
-                        }).then(function(thread, thread_created){
-                        if(thread_created){
+                    }}).then(function(thread, thread_created){
+                        
                             //Board created, now make the Comments
-                            return Comments.create({
-                                    thread_id: thread.id,
+                            return Comments.findOrCreate({where: {id: 1}, defaults:{
+                                    threadId: 1,
                                     author: "420",
                                     comment: "This is reply to the thread"
-                            }).then(function(){
+                            }}).then(function(){
                                 //Update our global variables.
                                 Boards.findAll().then(function(boards){
                                     app.locals.boards = boards;
@@ -56,11 +56,11 @@ module.exports = {
                             }).catch(function(err){
                                 console.log("DB Error: " + err);
                             });                           
-                        }
+                        
                     }).catch(function(err){
                         console.log("DB Error: " + err);
                     });
-                }
+               
             }).catch(function(err){
                 console.log("DB Error: " + err);
             });

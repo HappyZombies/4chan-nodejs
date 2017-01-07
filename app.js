@@ -8,15 +8,13 @@ var express = require('express'),
     bodyParser = require('body-parser');
 require('dotenv').config();
 var config = require("./config");
-config.seedDatabase(Boards, Comments, Threads, app);
-
 var Boards = require("./models/boards");
 var Threads = require("./models/threads");
 var Comments = require("./models/comments");
 
 //Seed our database.
 console.log("Seeding ...");
-
+config.seedDatabase(Boards, Comments, Threads, app);
 //var middlewares = require("./middlewares");
 //'Custom' modules/variables.
 var port = process.env.PORT || 3000;
