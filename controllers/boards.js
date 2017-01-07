@@ -19,7 +19,8 @@ module.exports = function(app, Boards, Threads, Comments){
                 Threads.findAll({
                     where: {
                         board_id: board.id
-                    }
+                    },
+                    include: [ {model: Comments, as: "comments", limit: 5, order: "createdAt ASC"} ]
                 }).then(function(threads){
                     res.render('boards', {board: board, threads: threads});
                 }).catch(function(err){

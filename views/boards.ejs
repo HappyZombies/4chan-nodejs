@@ -52,11 +52,35 @@
                     <span id="thread-id">No.<%= thread.id %></span>
                     <blockquote id="thread-message" class="comment"><%= thread.comment %></blockquote>
                     <span class="summary"><a href="/board/<%= board.slug %>/thread/<%= thread.id %>">Click here</a> to view thread.</span>
+                     <!-- Begin comments-->
+                    <div class = "reply-container">
+                        <% thread.comments.forEach(function(reply){ %>
+                            <span class="sideArrow">>>>&nbsp;</span>
+                            <div class="reply">
+                                <div class="comment-info">
+                                    <span id="thread-author"><%= reply.author %>&nbsp;</span>
+                                    <span><i><%= reply.createAt %></i>&nbsp;</span>
+                                    <span>No.<%= reply.id %>&nbsp;</span>
+                                </div>
+                                <% if(!(reply.file === null)) { %>
+                                    <div class="threadThumbnail commentThumbnail">
+
+                                        <a class="threadImg-big" href="<%= reply.file %>">
+                                            <img class="threadImg" src="{<%= reply.file %>" title="Click to enlarge image.">
+                                        </a>
+                                    </div>
+                                <% } %>
+                                <blockquote class="comment"><%= reply.comment %> &nbsp;</blockquote>
+                            </div>
+                        <% }); %>
+                    </div>
                 </div>
         </section>
 
     <% }); %>
-    
+    <hr>
+    <hr>
+    <!--pagination would go here...-->
     <script src="/assets/js/boards-main.js"></script>
 </body>
 

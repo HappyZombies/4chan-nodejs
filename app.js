@@ -29,10 +29,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'ejs');
 
-//set global variable for all the boards for every page.
-//when running node app.js for the first time, this local variable will not get set. Run node app.js twice!
-
-
 //Call in our controllers/routes
 indexController(app);
 boardController(app, Boards, Threads, Comments);

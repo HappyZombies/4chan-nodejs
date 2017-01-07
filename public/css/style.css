@@ -125,3 +125,11 @@ br.clear{
     line-height: 0;
     clear: both;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.legal{
+    padding:10px;
+}
