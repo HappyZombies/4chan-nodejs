@@ -68,7 +68,13 @@
     display: none;
 }
 
+.expandedImg {
+    max-width: none!important;
+}
 
+.threadThumbnail-push {
+    float: none;
+}
 
 .reply-container{
     margin-left: 20px;

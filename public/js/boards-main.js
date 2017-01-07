@@ -6,6 +6,7 @@ var post_thread_form = document.getElementById("post-thread-form");
 var hideIcon = document.getElementsByClassName("hideIcon");
 var getUrl = window.location;
 var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+var imageLinks = document.querySelectorAll('.threadImg-big[href$=".png"],  .threadImg-big[href$=".jpg"],  .threadImg-big[href$=".gif"], .threadImg-big[href$=".bmp"], .threadImg-big[href$=".PNG"]');
 
 function randomBanner(){
     //lol lazy
@@ -30,3 +31,15 @@ for (var i = 0; i < hideIcon.length; i++) {
        this.classList.toggle("hideThread");
    }, false);
 }
+
+Array.prototype.forEach.call(imageLinks, function(el, i){
+    if(el){
+        console.log("There is an element");
+        el.setAttribute('title', "Click to enlarge image.");
+        el.addEventListener('click', function(e){
+            e.preventDefault();
+            this.children[0].classList.toggle("expandedImg");
+            this.parentElement.classList.toggle("threadThumbnail-push");
+        }, false);
+    }
+});
