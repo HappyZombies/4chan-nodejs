@@ -32,14 +32,28 @@ module.exports = function(app, Boards, Threads, Comments){
 
     //view individual thread
     app.get('/board/:slug/thread/:thread_id', function(req, res){
-        if(!isNaN(req.params.thread_id)){
-            //threads are numbers.
-            Threads.findById(req.params.thread_id).then(function(thread){
-                res.json(thread);
-            });
-        }else{
-            res.status(400).send({ error: 'Thread Not Found!' });
-        }
+
+        //Let's still check if we are in the proper board 
+        Boards.findOne({
+            where: {
+                slug: req.params.slug
+            }
+        }).then(function(board){
+            if(board == null){
+                res.status(400).send({ error: 'Board Not Found!' });
+            }else{
+                 if(!isNaN(req.params.thread_id)){
+                    //threads are numbers.
+                    Threads.findById(req.params.thread_id, {include: [ {model: Comments, as: "comments", order: "createdAt ASC"}]}).then(function(thread){
+                        res.render('threads', {board: board, thread: thread});
+                    });
+                }else{
+                    res.status(400).send({ error: 'Thread Not Found!' });
+                }
+            }
+        }).catch(function(err){
+            res.status(500).send({ error: 'Something went wrong!' });
+        });
     });
 
 };
