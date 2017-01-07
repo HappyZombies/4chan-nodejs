@@ -35,7 +35,9 @@ module.exports = function(app, Boards, Threads, Comments){
     app.get('/board/:slug/thread/:thread_id', function(req, res){
         if(!isNaN(req.params.thread_id)){
             //threads are numbers.
-            res.json({it: "Yes a number"});
+            Threads.findById(req.params.thread_id).then(function(thread){
+                res.json(thread);
+            });
         }else{
             res.status(400).send({ error: 'Thread Not Found!' });
         }
