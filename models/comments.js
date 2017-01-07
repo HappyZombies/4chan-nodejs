@@ -1,15 +1,10 @@
 var sequelize = require("../config/index").getSequelize();
 var Sequelize = require('sequelize');
 
-var Threads = sequelize.define('threads', {
-    boardId: {
+var Comments = sequelize.define('comments', {
+    threadId: {
         type: Sequelize.INTEGER(120),
-        field: 'board_id',
-        allowNull: false
-    },
-    subject: {
-        type: Sequelize.STRING(150),
-        field: 'subject',
+        field: 'thread_id',
         allowNull: false
     },
     author: {
@@ -25,10 +20,9 @@ var Threads = sequelize.define('threads', {
     },
     file: {
         type: Sequelize.STRING(150),
-        field: 'file',
-        allowNull: false
+        field: 'file'
     }
 
 });
 
-module.exports = Threads;
+module.exports = Comments;

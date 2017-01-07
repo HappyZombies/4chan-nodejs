@@ -2,7 +2,7 @@
  * Controllers (or routes) for our boards!
  */
 
-module.exports = function(app, Boards, Threads){
+module.exports = function(app, Boards, Threads, Comments){
 
     //view board with all threads.
     app.get('/board/:slug', function(req, res){
