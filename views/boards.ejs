@@ -54,7 +54,7 @@
                     <span class="summary"><a href="/board/<%= board.slug %>/thread/<%= thread.id %>">Click here</a> to view thread.</span>
                      <!-- Begin comments-->
                     <div class = "reply-container">
-                        <% thread.comments.forEach(function(reply){ %>
+                        <% thread.comments.reverse().forEach(function(reply){ %>
                             <span class="sideArrow">>>>&nbsp;</span>
                             <div class="reply">
                                 <div class="comment-info">
