@@ -18,6 +18,7 @@ module.exports = function(app, Boards, Threads, Comments){
                 Threads.findAll({
                     where: { board_id: board.id },
                     limit: 5,
+                    order: "createdAt DESC",
                     include: [ {model: Comments, as: "comments", limit: 5, order: "createdAt ASC"} ]
                 }).then(function(threads){
                     res.render('boards', {board: board, threads: threads});
@@ -54,6 +55,38 @@ module.exports = function(app, Boards, Threads, Comments){
         }).catch(function(err){
             res.status(500).send({ error: 'Something went wrong!' });
         });
+    });
+
+
+    //Post methods.
+    
+    app.post('/board/:slug/thread', function(req, res){
+        Boards.findOne({
+            where: {
+                slug: req.params.slug
+            }
+        }).then(function(board){
+            if(board == null){
+                res.status(400).send({ error: 'Board Not Found!' });
+            }else{
+                Threads.create({
+                    boardId: board.id,
+                    subject: req.body.subject,
+                    author: req.body.name,
+                    comment: req.body.comment,
+                    file: req.body.upfile
+                }).then(function(thread){
+                    console.dir("Create??");
+                    res.redirect('/board/'+req.params.slug+'/thread/'+thread.id);
+                }).catch(function(err){
+                    console.dir(err);
+                    res.status(500).send({ error: 'Something went wrong when creating...' });
+                });
+            }
+        }).catch(function(err){
+            console.dir(err);
+            res.status(500).send({ error: 'Something went wrong when finding...' });
+        })
     });
 
 };
