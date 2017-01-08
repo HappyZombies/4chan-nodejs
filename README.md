@@ -24,3 +24,11 @@ There are a lot of features that 4chan provides that are not yet added. The over
 - Sure! This project is made for fun! I have no intent on publishing this (who knows honestly). Go ahead open an issue if there's a bug, fork, and send requests! The more the merrier.
 
  # [Join our Slack!](https://4chan-nodejs.slack.com)
+
+Roadmap... *so far*.
+-------------
+
+### To-Do
+- [ ] Create the basics/core of 4chan. 
+- [ ] Add form validation to backend and frontend. 
+- [ ] Add 4chan misc. features (this will be broken up to other tasks)
