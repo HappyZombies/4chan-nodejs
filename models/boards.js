@@ -14,4 +14,5 @@ var Boards = sequelize.define('boards', {
     }
 });
 
+Boards.sync();
 module.exports = Boards;

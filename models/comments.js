@@ -25,4 +25,5 @@ var Comments = sequelize.define('comments', {
 
 });
 
+Comments.sync();
 module.exports = Comments;

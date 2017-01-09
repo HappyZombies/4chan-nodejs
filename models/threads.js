@@ -31,4 +31,5 @@ var Threads = sequelize.define('threads', {
 
 });
 
+Threads.sync();
 module.exports = Threads;
