@@ -58,3 +58,37 @@
 #post-form-toggle a {
     text-decoration: none;
 }
+
+div.pagelist {
+    font-size: 13px!important;
+    margin: 0;
+    padding: 3px 7px;
+    float: left;
+    border: none;
+    background: #F0E0D6;
+    border-right: 1px solid #D9BFB7;
+    border-bottom: 1px solid #D9BFB7;
+    list-style: none;
+    overflow: hidden;
+    color: #B86;
+}
+
+div.pagelist div.pages {
+    padding: 4px;
+}
+
+div.pagelist strong {
+    color: #800000;
+}
+
+div.pagelist div.pages a {
+    text-decoration: none!important;
+}
+
+div.pagelist>div {
+    float: left;
+}
+
+div.pagelist form {
+    display: inline;
+}

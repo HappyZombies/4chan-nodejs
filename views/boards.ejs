@@ -35,7 +35,6 @@
     </div>
     
     <!--display each thread from this board, make a seperate file for this ? -->
-    <%-JSON.stringify(threads)%>
     <% threads.forEach(function(thread){%>
         <hr>
         <section class="thread-container id-<%= thread.id %> clearfix">
@@ -64,7 +63,6 @@
                                 </div>
                                 <% if(!(reply.file === null)) { %>
                                     <div class="threadThumbnail commentThumbnail">
-
                                         <a class="threadImg-big" href="<%= reply.file %>">
                                             <img class="threadImg" src="<%= reply.file %>" title="Click to enlarge image.">
                                         </a>
@@ -80,7 +78,14 @@
     <% }); %>
     <hr>
     <hr>
-    <!--pagination would go here...-->
+    <div class="pagelist desktop">
+        <!--Fix ! -->
+        <div class="pages">[<a href="1">1</a>] [<a href="2">2</a>] [<a href="3">3</a>] [<a href="4">4</a>] [<a href="5">5</a>] [<a href="6">6</a>] [<a href="7">7</a>] [<a href="8">8</a>] [<a href="9">9</a>] [<a href="10">10</a>] </div
+        <div class="next">
+            <form class="pageSwitcherForm" action="<%=threads.pagination.nextPage%>"><input type="submit" value="Next" accesskey="x"></form>
+        </div>
+    </div>
+    <br>
     <script src="/assets/js/boards-main.js"></script>
 </body>
 
