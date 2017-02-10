@@ -14,6 +14,7 @@ With MySQL, create a database. If you are lazy, copy this command in insert into
 
 
 There are a lot of features that 4chan provides that are not yet added. The overall core functionality of 4chan is what's currently present. These 4chan features will be added eventually. 
+#####Note: *Due to the school season, progress is slow but updates will be occasionally made. Expect summer to be loads of fun!* 
 
 # FAQ 
 
@@ -29,6 +30,6 @@ Roadmap... *so far*.
 -------------
 
 ### To-Do
-- [ ] Create the basics/core of 4chan. 
+- [x] Create the basics/core of 4chan. 
 - [ ] Add form validation to backend and frontend. 
-- [ ] Add 4chan misc. features (this will be broken up to other tasks)
+- [ ] Add 4chan misc. features including: banning users, deleting threads/comments, admin interface and more (this will be broken up to other tasks)
