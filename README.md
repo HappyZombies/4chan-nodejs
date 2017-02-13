@@ -1,10 +1,9 @@
-<p align="center">
-  <img src = "4chanclonelogo.png" height="300" width="251">
-  </img>
-</p>
-
 # 4chan NodeJS
 
+<p align="center">
+  <img src = "4chanclonelogo.png" height="250" width="300">
+  </img>
+</p>
 
 A 4chan clone that is written in NodeJS. No front-end libraries are used. It's all vanilla JS, CSS and HTML.
 
