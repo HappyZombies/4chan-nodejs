@@ -1,3 +1,8 @@
+<div>
+  <img src = "4chanclonelogo.png">
+  </img>
+</div>
+
 # 4chan NodeJS
 
 
