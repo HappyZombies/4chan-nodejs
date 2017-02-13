@@ -1,7 +1,7 @@
-<div>
-  <img src = "4chanclonelogo.png">
+<p align="center">
+  <img src = "4chanclonelogo.png" height="300" width="251">
   </img>
-</div>
+</p>
 
 # 4chan NodeJS
 
