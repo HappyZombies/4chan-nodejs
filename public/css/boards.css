@@ -92,3 +92,36 @@ div.pagelist>div {
 div.pagelist form {
     display: inline;
 }
+
+#boardForm, #threadForm{
+    width: 468px;
+    margin: 0 auto;
+}
+
+#boardForm .inputField, #threadForm .inputField{
+    text-align: left;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.inputField .label{
+    background-color: #EA8;
+    color: #800;
+    font-weight: bold;
+    border: 1px solid #800;
+    padding: 1px 5px;
+    font-size: 10pt;
+    float: left;
+    width: 78px;
+    margin-right: 2px;
+}
+.inputField #boardComment{
+    padding: 22px 5px;
+}
+.inputField #boardFile{
+    margin-top: -5px;
+}
+.inputField>input[type=text] {
+    width: 244px;
+    margin-right: 2px;
+}

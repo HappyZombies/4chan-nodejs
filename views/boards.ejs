@@ -17,16 +17,30 @@
     <div class="post-form">
         <div id="post-form-toggle">[<a href="">Start a New Thread</a>]</div>
         <!--4chans 'form' is a table, so I made my own version of it cuz I ain't touching that-->
-        <form action="/board/<%= board.slug %>/thread/" style="display: none;" id="post-thread-form" method="post">
-            <b><h1>This is not working yet</h1></b><br> <!--delete later-->
-            <label for="name">Name</label><input type="text" name="name" placeholder="Anonymous">
-            <label for="options">Options</label><input type="text" name="options">
-            <label for="subject">Subject</label><input type="text" name="subject">
-            <label for="comment">Comment</label><textarea name="comment" id="comment" cols="48" rows="4"></textarea>
-            <label for="erification">Verification</label><div></div>
-            <label for="erification">File</label><input type="file" name="upfile">
-            <button type="submit">Post</button>
-        </form>
+        <div id="boardForm">
+            <form action="/board/<%= board.slug %>/thread/" style="display: none;" id="post-thread-form" method="post">
+                <div class="inputField">
+                    <div for="name" class="label">Name</div><input type="text" name="name" placeholder="Anonymous">
+                </div>
+                <div class="inputField">
+                    <div for="options" class="label">Options</div><input type="text" name="options">
+                </div>
+                <div class="inputField">
+                    <div for="subject"class="label">Subject</div><input type="text" name="subject"><button type="submit">Post</button>
+                </div>
+                <div class="inputField">
+                    <div for="comment" class="label" id="boardComment">Comment</div><textarea name="comment" id="comment" cols="48" rows="4" wrap="soft" tabindex="4"></textarea>
+                </div>
+                <!--<div>
+                    <label for="verification">Verification</label><div></div>
+                </div>-->
+                <div class="inputField">
+                    <div for="file" class="label" id="boardFile">File</div><input type="file" name="upfile">
+                </div>
+             
+                
+            </form>
+        </div>
     </div>
     <div class="board-announcment">
         <hr class="short-length">

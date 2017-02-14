@@ -1,6 +1,6 @@
 /* 
  * Project Name: 4chan NodeJS
- * Written by Daniel Reguero <daniel.reguero@hotmail.com>
+ * Written by Daniel <daniel.reguero@hotmail.com>
  */
 //Import our Modules
 var express = require('express'),

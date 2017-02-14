@@ -1,5 +1,5 @@
 /**
- * Created by Daniel Reguero on 10/23/2016.
+ * Created by Daniel on 10/23/2016.
  */
 var toggle_form_button = document.getElementById("post-form-toggle");
 var post_thread_form = document.getElementById("post-thread-form");
@@ -43,3 +43,7 @@ Array.prototype.forEach.call(imageLinks, function(el, i){
         }, false);
     }
 });
+
+
+//Front end validation.
+

@@ -1,6 +1,7 @@
 /**
  * Controllers (or routes) for our boards!
  */
+var helpers = require("../lib/helpers");
 
 module.exports = function(app, Boards, Threads, Comments){
 
@@ -84,11 +85,17 @@ module.exports = function(app, Boards, Threads, Comments){
             if(board == null){
                 res.status(400).send({ error: 'Board Not Found!' });
             }else{
+                //Create a new thread.
+                if(!helpers.validateThreads(req.body)){
+                    //validation was WRONG. Return.
+                    console.log("The form was invalid!");
+                    return;
+                }
                 Threads.create({
                     boardId: board.id,
-                    subject: req.body.subject,
-                    author: req.body.name,
-                    comment: req.body.comment,
+                    subject: helpers.htmlEntities(req.body.subject),
+                    author: helpers.htmlEntities(req.body.name), //FIXME: default value is not being set
+                    comment: helpers.htmlEntities(req.body.comment),
                     file: req.body.upfile
                 }).then(function(thread){
                     res.redirect('/board/'+req.params.slug+'/thread/'+thread.id);
