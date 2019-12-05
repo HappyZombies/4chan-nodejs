@@ -8,7 +8,7 @@
 <div align="center">
 
 ![Shields.io](https://img.shields.io/badge/version-0.0.0--alpha-orange.svg)
-[![GitHub Issues](https://img.shields.io/github/issues/HappyZombies/brackette-alpha.svg)](https://github.com/HappyZombies/4chan-nodejs/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/HappyZombies/4chan-nodejs.svg)](https://github.com/HappyZombies/4chan-nodejs/issues)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
