@@ -27,6 +27,7 @@ A 4chan-like clone that uses NodeJS, React and MySql.
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Contributing](../CONTRIBUTING.md)
+- [FAQ](#faq)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -85,8 +86,6 @@ _TBD_
 
 - #### I want to help!
     - Sure! This project is made for fun! Go ahead open an issue if there's a bug, fork, and send requests! The more the merrier.[ You can also Join our Discord!](https://example.com)
-
----
 
 ## ✍️ Authors <a name = "authors"></a>
 
