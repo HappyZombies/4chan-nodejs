@@ -1,0 +1,32 @@
+{
+  "name": "4chan-server",
+  "version": "0.0.1",
+  "description": "This is the backend api that runs 4chan",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "nodemon ./app.js",
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel <daniel.reguero@altr.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0",
+    "joi": "^14.3.1",
+    "knex": "^0.20.3",
+    "morgan": "^1.9.1",
+    "mysql2": "^2.0.1",
+    "objection": "^2.0.3",
+    "typedi": "^0.8.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "supertest": "^4.0.2"
+  }
+}
