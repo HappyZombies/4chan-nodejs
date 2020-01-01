@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTable("boards", table => {
-    table.increments("id").primary();
+    table.increments().primary();
     table.string("name").notNullable();
     table.string("slug").notNullable();
     table.string("description");

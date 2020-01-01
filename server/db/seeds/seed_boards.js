@@ -2,16 +2,17 @@ if (process.env.NODE_ENV === "production") {
   throw new Error("Can't run seeds in production");
 }
 
-exports.seed = function(knex) {
+exports.seed = async function(knex) {
   // Deletes ALL existing entries
   return knex("boards")
     .del()
     .then(function() {
       // Inserts seed entries
       return knex("boards").insert([
-        { name: "Politically Incorrect", slug: "pol" },
-        { name: "Video Games", slug: "v" },
+        { id: 1, name: "Politically Incorrect", slug: "pol" },
+        { id: 2, name: "Video Games", slug: "v" },
         {
+          id: 3,
           name: "Random",
           slug: "b",
           description:
