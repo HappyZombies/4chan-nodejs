@@ -14,4 +14,10 @@ module.exports = app => {
   route.get("/", async (req, res) =>
     res.json(await boardService.getAllBoards()).status(HttpStatus.OK)
   );
+
+  route.get("/:slug/:page?", async (req, res) =>
+    res
+      .json(await boardService.boardsHomePage(req.params.slug))
+      .status(HttpStatus.OK)
+  );
 };
