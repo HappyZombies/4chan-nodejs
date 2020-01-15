@@ -7,7 +7,7 @@
 
 A 4chan clone that is written in NodeJS. No front-end libraries are used. It's all vanilla JS, CSS and HTML.
 
-# See the new and updated project [here!](https://github.com/HappyZombies/4chan-react-nodejs)
+# Project is being rewritting [here!](https://github.com/HappyZombies/4chan-nodejs/tree/rewrite)
 
 
 Getting Started
